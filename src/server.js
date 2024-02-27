@@ -9,7 +9,7 @@ dotenv.config();
 app.use(cors());
 
 //PORT CONNECTION
-const PORT = process.env.PORT || 7000;
+const PORT = process.env.PORT || 9000;
 
 //DB CONFIG
 import dbConfig from './db/dbConfig.js';
@@ -20,7 +20,7 @@ const startServer = async () => {
     try {
         await dbConfig();
         app.on("error", (err) => {
-            console.log("Error: --> ", err);
+            console.log("Error isme hai ", err);
         });
         app.listen(PORT, () => {
             console.log(`Server is running on port ${PORT}`);

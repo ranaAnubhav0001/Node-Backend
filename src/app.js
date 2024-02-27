@@ -1,8 +1,11 @@
-import express from 'express'
+import express, { json, urlencoded } from 'express'
 const app = express();
 
 //FOR JSON 
-app.use(express.json());
+app.use(json());
+
+//FOR URL
+app.use(urlencoded());
 
 
 export default app;
